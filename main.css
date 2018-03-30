@@ -1,9 +1,21 @@
+body {
+  background-image: url("stars.png");
+  color: white;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 18px;
+  line-height: 2;
+}
+
 #div {
     margin-top: 100px;
 }
 
 #input {
     width: 65%;
+}
+
+.horoscopes {
+  border: 3px solid purple;
 }
 
 @media only screen and (min-width: 992px) {

@@ -59,7 +59,7 @@ button.addEventListener("click", function() {
 	var userInput = document.getElementById("input").value.toLowerCase();
 	for (var i = 0; i < horoscopes.length; i++) {
 		if (horoscopes[i].hasOwnProperty(userInput)) {
-			current_look.innerHTML = horoscopes[i].img + "<br>" + "<br>" + horoscopes[i][userInput] + "<br>" + "<br>" + "<button id='button'>Try another sign</button>";
+			current_look.innerHTML = horoscopes[i].img + "<br>" + "<br>" + "<p class='horoscopes'>horoscopes[i][userInput]</p>" + "<br>" + "<br>" + "<button id='button'>Try another zodiac</button>";
 			document.getElementById("button").addEventListener("click", function() {
 				location.reload();
 			});
@@ -83,14 +83,13 @@ inputBox.addEventListener("keyup", function(event) {
 	if (event.which === 13) {
 		for (var i = 0; i < horoscopes.length; i++) {
 			if (horoscopes[i].hasOwnProperty(userInput)) {
-				current_look.innerHTML = horoscopes[i].img + "<br>" + "<br>" + "<br>" + "<br>" + horoscopes[i][userInput] + "<br>" + "<br>" + "<button id='button'>Try another sign</button>";
+				current_look.innerHTML = horoscopes[i].img + "<br>" + "<br>" + "<br>" + "<br>" + horoscopes[i][userInput] + "<br>" + "<br>" + "<button id='button'>Try another zodiac</button>";
 				document.getElementById("button").addEventListener("click", function() {
 					location.reload();
 				});
 			} else {
 				document.getElementById("err-par").innerHTML = "no signs with that name, try again!";
-		} 
-	} 
+		}
+	}
 }
 });
-
